@@ -129,3 +129,15 @@ If you know of a great local AI tool not listed here, [open an issue](https://gi
 [![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)
 
 This list is released under [MIT License](LICENSE).
+
+---
+
+<div align="center">
+
+**If you find this project useful, please consider giving it a star!** ⭐
+
+It helps others discover this project and motivates continued development.
+
+[![Star](https://img.shields.io/github/stars/Turbo31150/awesome-local-ai?style=social)](https://github.com/Turbo31150/awesome-local-ai)
+
+</div>
