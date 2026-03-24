@@ -19,6 +19,7 @@ Running AI on your own hardware gives you **privacy**, **speed**, **zero API cos
 - [GPU Management](#gpu-management)
 - [Orchestration](#orchestration)
 - [Models (Open Source)](#models-open-source)
+- [Model Hosting & Routing](#model-hosting--routing)
 - [Contributing](#contributing)
 
 ---
@@ -93,12 +94,27 @@ Running AI on your own hardware gives you **privacy**, **speed**, **zero API cos
 | Model Family | Description |
 |-------------|-------------|
 | [Qwen](https://github.com/QwenLM/Qwen) | Alibaba's series of large language models. Strong multilingual and coding performance. |
+| [Qwen3.5 27B](https://huggingface.co/Qwen/Qwen3.5-27B) | 72.4% SWE-bench — matches GPT-5 Mini on consumer GPU. |
+| [Qwen3.5 35B-A3B (MoE)](https://huggingface.co/Qwen/Qwen3.5-35B-A3B) | MoE with only 3B active params. 112 tok/s on RTX 3090. |
 | [DeepSeek](https://github.com/deepseek-ai/DeepSeek-V3) | High-performance open models with strong reasoning capabilities. |
+| [DeepSeek V3.2-Exp](https://huggingface.co/deepseek-ai/DeepSeek-V3.2-Exp) | Advanced reasoning, latest experimental release from DeepSeek. |
+| [Nemotron-3-Super 122B](https://huggingface.co/nvidia/Nemotron-3-Super-122B) | NVIDIA's highest scoring open model on PinchBench. |
+| [Llama 4](https://github.com/meta-llama/llama4) | Meta's latest generation of open-weight LLMs. |
+| [Gemma 3](https://huggingface.co/google/gemma-3) | Google's latest lightweight open model built from Gemini research. |
+| [Kimi-K2](https://huggingface.co/moonshotai/Kimi-K2) | Moonshot AI's powerful open model. |
+| [Hunter Alpha 1T](https://openrouter.ai/models/hunter-alpha-1t) | 1 trillion parameter model, available free on OpenRouter. |
 | [Mistral](https://github.com/mistralai/mistral-inference) | Efficient open models from Mistral AI. Excellent performance-to-size ratio. |
 | [LLaMA](https://github.com/meta-llama/llama) | Meta's family of open-weight LLMs. Foundation for many fine-tuned variants. |
 | [Gemma](https://github.com/google/gemma_pytorch) | Google's lightweight open models built from Gemini research. |
 | [Phi](https://huggingface.co/microsoft/phi-3-mini-4k-instruct) | Microsoft's small language models with strong reasoning for their size. |
 | [StarCoder](https://github.com/bigcode-project/starcoder) | Open-access code LLMs trained on permissively licensed data. |
+
+## Model Hosting & Routing
+
+| Tool | Description |
+|------|-------------|
+| [OpenRouter](https://openrouter.ai/) | Unified API for hundreds of models including free hosting for large open models. |
+| [OpenClaw](https://github.com/openclaw/openclaw) | Open-source AI tool with official Ollama provider for seamless local model integration. |
 
 ---
 
