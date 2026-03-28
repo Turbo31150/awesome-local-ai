@@ -43,6 +43,73 @@ Run everything on your hardware. No API keys. No data leaks. No monthly bills.
 
 
 
+
+## Getting Started with Local AI
+
+### Step 1: Choose Your Inference Engine
+
+| Engine | Best For | GPU Required |
+|--------|----------|-------------|
+| **LM Studio** | Beginners, GUI | 8GB+ VRAM |
+| **Ollama** | CLI, quick testing | 4GB+ VRAM |
+| **vLLM** | Production, high throughput | 16GB+ VRAM |
+| **llama.cpp** | CPU inference, low resources | No GPU needed |
+
+### Step 2: Pick Your Models
+
+```bash
+# Chat/reasoning
+ollama pull llama3.1:8b          # General purpose
+ollama pull deepseek-r1:7b       # Deep reasoning
+ollama pull qwen2.5:7b           # Multilingual
+
+# Voice
+# Install Whisper for speech-to-text
+pip install openai-whisper
+
+# Embeddings  
+ollama pull nomic-embed-text     # Document search
+```
+
+### Step 3: Build Your Pipeline
+
+```python
+# Simple local AI pipeline
+import requests
+
+# Query your local model
+response = requests.post("http://localhost:11434/api/generate", json={
+    "model": "llama3.1:8b",
+    "prompt": "Explain quantum computing in 3 sentences"
+})
+print(response.json()["response"])
+# → Runs entirely on YOUR hardware. Zero API costs.
+```
+
+## Cost Comparison: Cloud vs Local
+
+| | Cloud (GPT-4) | Local (8B model) | Local (JARVIS Cluster) |
+|---|---|---|---|
+| **Monthly cost** | $200-2000 | $5 electricity | $30 electricity |
+| **Setup cost** | $0 | $500-1000 GPU | $3000 cluster |
+| **Privacy** | Data sent to OpenAI | 100% local | 100% local |
+| **Speed** | 500ms+ (network) | 50-200ms | 1-5ms (cached) |
+| **Rate limits** | Yes (TPM/RPM) | None | None |
+| **Offline** | No | Yes | Yes |
+| **Break-even** | - | 3 months | 6 months |
+
+## Real-World Local AI Projects
+
+All built with 100% local inference:
+
+| Project | What It Does |
+|---------|-------------|
+| [JARVIS OS](https://github.com/Turbo31150/jarvis-linux) | 600+ agents on 6 GPUs |
+| [WhisperFlow](https://github.com/Turbo31150/jarvis-whisper-flow) | Voice AI <300ms |
+| [TradeOracle](https://github.com/Turbo31150/TradeOracle) | AI trading consensus |
+| [LUMEN](https://github.com/Turbo31150/lumen) | 50+ language transcription |
+
+
 ---
 
 ## Why Run AI Locally?
